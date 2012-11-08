@@ -1,7 +1,7 @@
 {
     "name" : "inferify",
     "description" : "Return a string representing the common datatype of a given Object[].",
-    "keywords" : [],
+    "keywords" : ["data types", "introspection", "csv"],
     "author" : "Avner Cohen <israbirding@gmail.com>",
     "version" : "0.0.2",
     "licenses" : [ {   
