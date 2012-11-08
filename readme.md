@@ -3,7 +3,7 @@ inferify
 
 [![Build Status](https://travis-ci.org/AvnerCohen/inferify.png)](https://travis-ci.org/AvnerCohen/inferify)
 
-Used to return the datatype that is common for an array or Object sent in.
+Module can be used to return the common datatype for an array of provided objects.
 
 This can be used to infer datatypes of values from data that does not support datatype declerations, such as CSV.
 
@@ -23,6 +23,16 @@ var dt = inferify(["banana", "juice"]);
 ````
 var dt = inferify([0.5, 0.4, 0.6);
 //dt = "float"
+````
+
+````
+var dt = inferify([12, 7, 8, 9]);
+//dt = "integer"
+````
+
+````
+var dt = inferify(["10/10/2010", "12/12/2012", "30/12/2001"]);
+//dt = "date"
 ````
 
 Returned Data Type can be a string with one of the following values:
