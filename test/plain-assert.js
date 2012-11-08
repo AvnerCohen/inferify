@@ -2,14 +2,14 @@ var assert = require('assert');
 
 module.exports = p_assert;
 
-function p_assert(message, should, is) {
+function p_assert(message, should, actual) {
     var userMessage = message + ", should return: " + should;
 
     try {
-        assert.equal(should, is);
+        assert.equal(should, actual);
         pass("\t*Passed*:\t " + userMessage);
     } catch (e) {
-        fail("\t*Failed*:\t" + userMessage + ". Instead got: " + is + ".");
+        fail("\t*Failed*:\t" + userMessage + ". Instead got: " + actual + ".");
         console.log(Array(30).join("#"));
         console.log(e);
          console.log(Array(30).join("#"));

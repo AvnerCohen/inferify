@@ -7,30 +7,42 @@ var DATA_TYPES = {
     date: "date",
     float: "float",
     integer: "integer",
-    number: "number"
+    number: "number",
+    boolean : "boolean"
 };
 
 function inferify(objArr) {
 
     var returnDataType = DATA_TYPES.string;
-    //Conver to String, the simplest form of data in this respect
-    var strArray = convertToString(objArr);
+    //normalize to make inference more straight forward
+    var strArray = normalizeArray(objArr);
+
+    //Run tests for booleans
+    var all_booleans = executeRegExp(strArray, /true|false|^$/);
+    if (all_booleans) {
+        return DATA_TYPES.boolean;
+    }
 
     //Run test - INTEGERS
-    var all_ints = executeRegExp(strArray, /[\d]/);
+    var all_ints = executeRegExp(strArray, /^(\d)*$/);
     if (all_ints) {
         return DATA_TYPES.integer;
     }
 
+    var all_floats = executeRegExp(strArray, /^([+-]?((([0-9]+(\.)+)|([0-9]*\.[0-9]+))?))$/);
+    if (all_floats) {
+        return DATA_TYPES.float;
+    }
 
     return returnDataType;
 }
 
 
-function convertToString(objArr) {
+function normalizeArray(objArr) {
     var arr = [];
     for (var i = 0; i < objArr.length; i++) {
-        arr.push(objArr[i].toString());
+       var value = objArr[i] || "";
+        arr.push(value.toString().toLowerCase());
     }
     return arr;
 }
