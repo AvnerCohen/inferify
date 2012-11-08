@@ -35,6 +35,11 @@ var dt = inferify(["10/10/2010", "12/12/2012", "30/12/2001"]);
 //dt = "date"
 ````
 
+````
+var dt = inferify(["true", "false" , "false"]);
+//dt = "date"
+````
+
 Returned Data Type can be a string with one of the following values:
 
 * string

@@ -13,6 +13,9 @@ p_assert("An array of integers", "integer", inferify(integerArray));
 var booleanArray = "true false true true".split(" ");
 p_assert("An array of booleans", "boolean", inferify(booleanArray));
 
+var mixedBooleanWithEmptyString = "true false true  true".split(" ");
+p_assert("Mixed boolean with empty string", "boolean", inferify(mixedBooleanWithEmptyString));
+
 
 var floatArray = [0.5,0.6,0.2,111.1];
 p_assert("An array of floats", "float", inferify(floatArray));
@@ -24,4 +27,5 @@ p_assert("An array of dates", "date", inferify(dateArray));
 
 var numberArray = [1,5.55,6,3,5,-7,111.11]; //Mixed negative, float and integer
 p_assert("Mixed negative, float and integer", "number", inferify(numberArray));
+
 
