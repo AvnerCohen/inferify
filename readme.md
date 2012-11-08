@@ -1,6 +1,6 @@
 inferify
 ===
-
+[![build status](https://travis-ci.org/AvnerCohen/inferify)]
 Used to return the datatype that is common for an array or Object sent in.
 
 This can be used to infer datatypes of values from data that does not support datatype declerations, such as CSV.
