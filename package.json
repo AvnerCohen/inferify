@@ -1,0 +1,19 @@
+{
+    "name" : "inferify",
+    "description" : "Return a string representing the common datatype of a given array.",
+    "keywords" : [],
+    "author" : "Avner Cohen <israbirding@gmail.com>",
+    "version" : "0.0.1",
+    "licenses" : [ {   
+            "type" : "MIT",
+            "url"  : "https://raw.github.com/AvnerCohen/comma-it/master/LICENSE"
+        }
+    ],
+    "engines"     : {"node": ">= 0.8.0"},
+     "dependencies" : { 
+        "optimist": "0.2.3"
+     },
+     "devDependencies" : {
+        "vows": ">= 0.6.4"
+     }
+}
