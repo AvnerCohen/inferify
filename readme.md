@@ -14,7 +14,7 @@ A possible use case would be:
 Usage:
 
 ````
-var dt = inferify(["banan", "juice"]);
+var dt = inferify(["banana", "juice"]);
 //dt = "string"
 ````
 
