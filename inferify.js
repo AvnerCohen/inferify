@@ -29,9 +29,19 @@ function inferify(objArr) {
         return DATA_TYPES.integer;
     }
 
-    var all_floats = executeRegExp(strArray, /^([+-]?((([0-9]+(\.)+)|([0-9]*\.[0-9]+))?))$/);
+    var all_floats = executeRegExp(strArray, /^([-]?((([0-9]+(\.)+)|([0-9]*\.[0-9]+))?))$/);
     if (all_floats) {
         return DATA_TYPES.float;
+    }
+
+    var all_dates = executeRegExp(strArray, new RegExp("(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/((19|20)\\d\\d)"));
+    if (all_dates){
+      return DATA_TYPES.date;
+    }
+
+    var all_numbers = executeRegExp(strArray, /^[-]?(\d*)(\.)?(\d)*$/);
+    if (all_numbers){
+      return DATA_TYPES.number;
     }
 
     return returnDataType;

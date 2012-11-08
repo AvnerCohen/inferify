@@ -18,7 +18,7 @@ var floatArray = [0.5,0.6,0.2,111.1];
 p_assert("An array of floats", "float", inferify(floatArray));
 
 
-var dateArray = "true false true true".split(" ");
+var dateArray = ["10/10/2010", "12/12/2012", "30/12/2001"];
 p_assert("An array of dates", "date", inferify(dateArray));
 
 
