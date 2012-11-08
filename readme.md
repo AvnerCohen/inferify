@@ -14,7 +14,13 @@ A possible use case would be:
 Usage:
 
 ````
-var dt = inferify([]);
+var dt = inferify(["banan", "juice"]);
+//dt = "string"
+````
+
+````
+var dt = inferify([0.5, 0.4, 0.6);
+//dt = "float"
 ````
 
 Returned Data Type can be a string with one of the following values:
@@ -23,3 +29,4 @@ Returned Data Type can be a string with one of the following values:
 * date
 * integer
 * float
+* number

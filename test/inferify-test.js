@@ -4,13 +4,9 @@ var inferify = require('../inferify');
 
 var strArray = "moshe david yalla haim".split(" ");
 
-p_assert("An array of string", inferify(strArray), "string");
-p_assert("An array of string", inferify(strArray), "date");
+p_assert("An array of strings", "string", inferify(strArray));
 
 
+var intArray = [1,5,6,3,5,7,11111];
 
-
-//Utility plain assert methods.
-//####
-//####
-//####
+p_assert("An array of integers", "integer", inferify(intArray));
