@@ -19,7 +19,7 @@ var dt = inferify([]);
 
 Returned Data Type can be a string with one of the following values:
 
-* String
-* Date
-* Integer
-* Float
+* string
+* date
+* integer
+* float
