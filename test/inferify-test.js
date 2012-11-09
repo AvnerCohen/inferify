@@ -1,5 +1,5 @@
 var p_assert = require("./plain-assert");
-var inferify = require('../inferify');
+var inferify = require('../lib/inferify');
 
 
 var stringArray = "moshe david yalla haim".split(" ");
