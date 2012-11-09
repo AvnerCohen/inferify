@@ -3,7 +3,7 @@
     "description" : "Return a string representing the common datatype of a given Object[].",
     "keywords" : ["data types", "introspection", "csv"],
     "author" : "Avner Cohen <israbirding@gmail.com>",
-    "version" : "0.0.3",
+    "version" : "0.0.4",
     "licenses" : [ {   
             "type" : "MIT",
             "url"  : "https://raw.github.com/AvnerCohen/comma-it/master/LICENSE"
@@ -13,7 +13,6 @@
      "dependencies" : { 
      },
      "devDependencies" : {
-        "vows": ">= 0.6.4"
      },
     "scripts": {
     "test": "node test/inferify-test.js"
