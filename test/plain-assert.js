@@ -6,13 +6,13 @@ function p_assert(message, should, actual) {
     var userMessage = message + ", should return: " + should;
 
     try {
-        assert.equal(should, actual);
+        assert.deepEqual(actual, should);
         pass("\t*Passed*:\t " + userMessage);
     } catch (e) {
         fail("\t*Failed*:\t" + userMessage + ". Instead got: " + actual + ".");
         console.log(Array(30).join("#"));
         console.log(e);
-         console.log(Array(30).join("#"));
+        console.log(Array(30).join("#"));
     }
 }
 
