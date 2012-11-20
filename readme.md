@@ -40,6 +40,17 @@ var dt = inferify(["true", "false" , "false"]);
 //dt = "date"
 ````
 
+One may also pass objects in the array, in which inferify
+will infer each attribute.
+
+```
+var dt = inferify([
+  { a: "true", b: "hello", c: "12/12/2012" },
+  { a: "false", b: "goodbye", c: "30/12/2012" },
+]);
+//dt = { a: "boolean", b: "string", c: "date" }
+```
+
 Returned Data Type can be a string with one of the following values:
 
 * string

@@ -29,3 +29,12 @@ var numberArray = [1,5.55,6,3,5,-7,111.11]; //Mixed negative, float and integer
 p_assert("Mixed negative, float and integer", "number", inferify(numberArray));
 
 
+var objectsArray = [
+  { a: 1, b: 'string', c: "10/10/2010" },
+  { a: '77', b: 'hello', c: "12/12/2012" },
+];
+p_assert(
+  "Array of objects, infer all attributes",
+  { a: 'integer', b: 'string', c: 'date' },
+  inferify(objectsArray)
+);
