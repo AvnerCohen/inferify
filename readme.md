@@ -37,7 +37,7 @@ var dt = inferify(["10/10/2010", "12/12/2012", "30/12/2001"]);
 
 ````
 var dt = inferify(["true", "false" , "false"]);
-//dt = "date"
+//dt = "boolean"
 ````
 
 One may also pass objects in the array, in which inferify
